@@ -15,7 +15,7 @@ generateBtn.addEventListener("click", writePassword);
 
 
 function generatePassword(){
-  var lengthofpw = parseInt(prompt("Enter a password length between (8-128)", 8))
+  var lengthofpw = parseInt(prompt("Enter a password length between (8-128)", 8)) //parseInt to stop any float.
   var possibleChars = "" //on call empties the string
 
   if (lengthofpw < 8 || lengthofpw > 128 || isNaN(lengthofpw)) {
