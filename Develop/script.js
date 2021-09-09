@@ -57,7 +57,5 @@ function generatePassword(){
   console.log(possibleChars)
   }
   return retVal;
-
-
-
 }
+// Loops for the length set by the user in lengthofpw
