@@ -16,31 +16,31 @@ generateBtn.addEventListener("click", writePassword);
 
 function generatePassword(){
   var lengthofpw = parseInt(prompt("Enter a password length between (8-128)", 8))
-  var possibleChars = ""
+  var possibleChars = "" //on call empties the string
 
-  if (lengthofpw < 8 || lengthofpw > 128) {
-    return "Please enter an amount between 8 and 128!";
-  }
+  if (lengthofpw < 8 || lengthofpw > 128 || isNaN(lengthofpw)) {
+    return "Please enter an number between 8 and 128!";
+  } //makes sure they enter a number between 8 and 128
 
-  var specialChars = confirm("Include special characters?")
+  var specialChars = confirm("Include special characters?") //If yes, adds chars below.
 
   if (specialChars == true){
     possibleChars += "!@#$%^&*()-+=[]}{";
   }
 
-  var lowerChars = confirm("Include lower case characters?")
+  var lowerChars = confirm("Include lower case characters?") //if yes adds lowercase
 
   if (lowerChars == true){
     possibleChars += "abcdefghijklmnopqrstuvwxyz"
   }
 
-  var upperChars = confirm("Include upper case characters?")
+  var upperChars = confirm("Include upper case characters?") //if yes adds uppercase
 
   if (upperChars == true){
     possibleChars += "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
   }
 
-  var numeric = confirm("Include numbers?")
+  var numeric = confirm("Include numbers?") //if yes adds numbers
 
   if (numeric == true){
     possibleChars += "1234567890"
