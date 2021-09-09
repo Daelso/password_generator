@@ -46,6 +46,10 @@ function generatePassword(){
     possibleChars += "1234567890"
   }
 
+  if (specialChars == false && numeric == false && lowerChars == false && upperChars == false){
+    return "You must approve at least one option to generate the password!";
+  }
+
 //credit to https://stackoverflow.com/questions/1349404/generate-random-string-characters-in-javascript
   retVal = "";
   for (var i = 0, n = possibleChars.length; i < lengthofpw; ++i) {
